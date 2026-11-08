@@ -1,10 +1,15 @@
 import structlog
+from structlog.contextvars import merge_contextvars
 
 from .env_settings import Settings
 
 
 def configure_logging(settings: Settings) -> None:
+    structlog.contextvars.clear_contextvars()
+    structlog.contextvars.bind_contextvars(version=settings.version)
+
     shared_processors = [
+        merge_contextvars,
         structlog.stdlib.add_log_level,
         structlog.stdlib.PositionalArgumentsFormatter(),
         structlog.processors.TimeStamper(fmt="iso"),
