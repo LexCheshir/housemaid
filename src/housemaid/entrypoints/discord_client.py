@@ -35,3 +35,7 @@ def main() -> None:
     print(f"{settings.app_name} {settings.version}")
     client.run(token=settings.discord_token)
     log.info("Done ^^")
+
+
+if __name__ == "__main__":
+    main()
