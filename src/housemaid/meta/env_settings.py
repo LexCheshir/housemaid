@@ -10,6 +10,12 @@ class Settings(BaseSettings):
         description="Dev environment flag",
         default=False,
     )
+    discord_app_id: str = ""
+    discord_public_key: str = ""
+    discord_token: str = Field(
+        description="Discord bot token. Used for Discord client authentication.",
+        default="",
+    )
 
     @computed_field
     @property
@@ -18,6 +24,6 @@ class Settings(BaseSettings):
 
     model_config = SettingsConfigDict(
         env_file=".env",
-        env_prefix="",
+        env_prefix="housemaid_",
         env_file_encoding="utf-8",
     )

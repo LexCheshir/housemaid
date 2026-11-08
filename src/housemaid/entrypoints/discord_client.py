@@ -30,5 +30,5 @@ async def on_message(message):
 def main() -> None:
     log = base_log.bind()
     print(f"{settings.app_name} {settings.version}")
-    # client.run("your token here")
+    client.run(token=settings.discord_token)
     log.info("Done ^^")
