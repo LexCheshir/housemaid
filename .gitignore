@@ -1,0 +1,23 @@
+# Editors
+.idea
+.gigacode
+.vscode
+.*_cache
+.sberstack
+
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Environments
+.venv
+.env
+
+# User Data
+*.log*
+*.local
+
