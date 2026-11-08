@@ -26,6 +26,9 @@ async def on_message(message):
     if message.content.startswith("$hello"):
         await message.channel.send("Hello!")
 
+    if message.content.startswith("ping"):
+        await message.channel.send("pong!")
+
 
 def main() -> None:
     log = base_log.bind()
