@@ -20,7 +20,7 @@ dev = [
 ]
 
 [project.scripts]
-housemaid = "housemaid:main"
+housemaid = "housemaid.entrypoints.discord_client:main"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
